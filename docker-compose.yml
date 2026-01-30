@@ -1,0 +1,40 @@
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${IDG_HTTP_PORT:-8001}:80"
+    volumes:
+      - ./:/var/www/html/idg
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: idgdb
+      WORDPRESS_DB_USER: idgdb
+      WORDPRESS_DB_PASSWORD: idgpassword
+      WP_HOME: ${WP_HOME:-http://localhost:${IDG_HTTP_PORT:-8001}/idg}
+      WP_SITEURL: ${WP_SITEURL:-http://localhost:${IDG_HTTP_PORT:-8001}/idg}
+      WP_DEBUG: "1"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: idgdb
+      MYSQL_USER: idgdb
+      MYSQL_PASSWORD: idgpassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-prootpassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  db_data:

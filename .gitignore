@@ -1,0 +1,50 @@
+# Ignore everything by default (WordPress core, vendor assets, uploads, etc.)
+*
+
+# Allow Git to traverse directories
+!*/
+
+# Always keep git config
+!.gitignore
+
+# Keep all markdown documentation
+!*.md
+!**/*.md
+
+# Never track WordPress core (even if it contains markdown)
+wp-admin/
+wp-includes/
+
+# Never track wp-content by default (themes/uploads/other plugins)
+wp-content/
+wp-content/**
+
+# Keep local dev Docker files
+!docker-compose.yml
+!Dockerfile
+!docker/
+!docker/**
+
+# Keep custom deliverables (per PLAN.md)
+!notes/
+!notes/**
+
+# Support either packaging style: a standalone plugins/ folder or WP's wp-content/plugins
+!plugins/
+!plugins/idg-custom/
+!plugins/idg-custom/**
+
+!wp-content/
+!wp-content/plugins/
+!wp-content/plugins/idg-custom/
+!wp-content/plugins/idg-custom/**
+
+# Keep ACF Local JSON if used
+!acf-json/
+!acf-json/**
+!wp-content/themes/**/acf-json/
+!wp-content/themes/**/acf-json/**
+
+# Optional: keep a child theme folder if you decide to include it later
+!child-theme/
+!child-theme/**
