@@ -11,13 +11,14 @@ I’d avoid Avada Builder when:
 I still use Avada for true marketing pages when it speeds delivery and the content is largely static.
 
 ## 2) ACF fields are stored in the database by default. How do you keep ACF field groups in sync across dev/staging/prod?
-Use **ACF Local JSON** (and treat it like code):
+Preferred: use **ACF Tools → Export → PHP** and commit the resulting `acf_add_local_field_group()` code into a custom plugin/theme so field groups are versioned and deployed via Git.
+
+Optional: use **ACF Local JSON** when the environment allows filesystem writes:
 
 - Save field groups to a tracked `acf-json/` directory.
 - Load JSON in each environment so field group changes are deployed through Git.
-- Make field group changes in dev/staging, review them via PR, and deploy forward.
 
-This avoids recreating field groups manually and avoids editing field definitions directly on production.
+Both approaches avoid recreating field groups manually and avoid editing field definitions directly on production.
 
 ## 3) How would you reduce risk during plugin updates?
 - Update on **staging first**, validate critical flows (checkout/cart, forms, SEO pages, caching behavior).

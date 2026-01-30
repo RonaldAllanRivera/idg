@@ -9,8 +9,9 @@ This document describes what custom code was added for the IDG WordPress skills 
   - Entry point: `wp-content/plugins/idg-custom/idg-custom.php`
 
 ## ACF Field Group Sync
-- Strategy: ACF Local JSON
-- JSON path (plugin-managed): `wp-content/plugins/idg-custom/acf-json/`
+- Preferred strategy: **ACF PHP export** (code-based field groups committed into `idg-custom`).
+- Optional strategy: ACF Local JSON
+  - JSON path (plugin-managed): `wp-content/plugins/idg-custom/acf-json/`
 
 ## Theme/Builder Work
 - Avada Builder: used for marketing page layout and global element creation.

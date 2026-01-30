@@ -83,9 +83,11 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 - Use a small, readable template partial structure (no giant functions.php blob).
 
 ## ACF Sync Best Practice
-- Use **ACF Local JSON** for field group versioning:
-  - Save JSON to a tracked folder (`acf-json/`) via filters in the custom plugin or child theme.
-  - Treat field groups as code-reviewed artifacts.
+- Preferred: **ACF PHP export (code-based field groups)** for field group versioning (works even when staging/prod filesystem isn’t writable / no FTP).
+  - Create field groups in WP Admin (ACF UI) on staging/dev.
+  - Use ACF Tools → Export → **PHP**.
+  - Commit the exported `acf_add_local_field_group()` code into the `idg-custom` plugin and deploy through Git.
+- Optional: **ACF Local JSON** can be enabled when filesystem writes are available.
 
 ## Acceptance Criteria
 - Listing page shows case studies (title + key fields) via a query.

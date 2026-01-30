@@ -10,7 +10,8 @@
   - minor theme-level styling adjustments
 
 ## ACF synchronization approach
-- Use **ACF Local JSON** so field groups are versioned, code-reviewed, and consistent across environments.
+- Preferred: **ACF PHP export** (code-based field groups in `idg-custom`) so field groups are versioned and consistent across environments even when staging/prod filesystem isn’t writable.
+- Optional: **ACF Local JSON** when filesystem writes are available.
 
 ## Performance mindset
 - Keep Avada Builder usage lean (avoid unnecessary nesting/effects).
