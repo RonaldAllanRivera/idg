@@ -19,6 +19,7 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 ---
 
 # Phase 0 — Setup & Risk Controls (15–30 min)
+**Status:** Completed (plugin scaffold + notes created; verified on staging and locally)
 ## Deliverables
 - A small repo/zip with a predictable structure:
   - `child-theme/` (if needed)
