@@ -1,7 +1,7 @@
 # QA Checklist & URLs
 
 ## URLs (fill in once complete)
-- Marketing page: 
+- Marketing page: https://dev.staging.idgadvertising.com/ronald/
 - Global element used on: 
 - Case studies listing: 
 - Case study single example: 
@@ -10,10 +10,10 @@
 - Checkout page:
 
 ## Phase 1 — Marketing page (Avada)
-- [ ] Hero section has background image, headline, CTA
-- [ ] 3-column features section present
-- [ ] Global element created and reused
-- [ ] Responsive: mobile/tablet/desktop checked
+- [x] Hero section has background image, headline, CTA
+- [x] 3-column features section present
+- [x] Global element created and reused
+- [x] Responsive: mobile/tablet/desktop checked
 
 ## Phase 2 — Case Studies (CPT + ACF)
 - [ ] CPT exists and can create entries

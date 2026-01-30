@@ -44,9 +44,10 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 ---
 
 # Phase 1 — Avada Marketing Page (60–90 min)
+**Status:** Completed (built with Avada Builder; global element created; responsive tested)
 ## Deliverables
 - One marketing page built with Avada Builder that includes:
-  - Hero section (background image, headline, CTA button)
+  - Hero section with background image, headline, CTA button
   - 3-column features section
   - One reusable global element (e.g., CTA strip)
   - Responsive behavior (mobile/tablet)
