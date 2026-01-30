@@ -28,6 +28,12 @@ Keeping CPTs, templates, and WooCommerce customizations in a custom plugin is be
 - ACF field output (ACF Pro required)
   - Field groups are expected to be created in WP Admin (stored in the database)
 
+## WooCommerce (Phase 3)
+- Product badge output via WooCommerce hooks.
+  - ACF field name: `product_badge_text`
+- Product highlight output on the single product page.
+  - ACF field name: `product_highlight`
+
 ## Engineering notes
 - Output is escaped/sanitized (`esc_html`, `esc_url`, `wp_kses_post`) and avoids hardcoding dynamic values in builder text blocks.
 - Query loops use `WP_Query` and reset global post state via `wp_reset_postdata()`.

@@ -96,6 +96,7 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 ---
 
 # Phase 3 — WooCommerce Setup + Customizations (60–90 min)
+**Status:** Completed (WooCommerce configured; simple + variable products created; badge + ACF field output implemented via `idg-custom`)
 ## Deliverables
 - WooCommerce installed + configured
 - Products:
@@ -104,6 +105,12 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 - Customizations (no core edits):
   - Custom product badge via hook/filter (e.g., “Best Seller”)
   - Display a custom ACF field on single product page
+
+## Staging URLs (Phase 3)
+- Store: https://dev.staging.idgadvertising.com/ronald/store/
+- Simple product: https://dev.staging.idgadvertising.com/ronald/product/simple-product/
+- Variable product: https://dev.staging.idgadvertising.com/ronald/product/variable-product/
+- Cart: https://dev.staging.idgadvertising.com/ronald/cart/
 
 ## Implementation Strategy
 - Put Woo customizations in `idg-custom` plugin:

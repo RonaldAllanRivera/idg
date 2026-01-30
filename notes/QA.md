@@ -9,9 +9,12 @@
 - ACF field group (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/post.php?post=202&action=edit
 - Case Studies (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/edit.php?post_type=case_study
 - Listing shortcode helper (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/edit.php?post_type=case_study&page=idg-case-studies-shortcode
-- Simple product: 
-- Variable product: 
-- Checkout page:
+- Simple product: https://dev.staging.idgadvertising.com/ronald/product/simple-product/
+- Variable product: https://dev.staging.idgadvertising.com/ronald/product/variable-product/
+- Store: https://dev.staging.idgadvertising.com/ronald/store/
+- Cart: https://dev.staging.idgadvertising.com/ronald/cart/
+- ACF field groups (Products) (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/edit.php?post_type=acf-field-group
+- Checkout page: https://dev.staging.idgadvertising.com/ronald/checkout/
 
 ## Phase 1 — Marketing page (Avada)
 - [x] Hero section has background image, headline, CTA
@@ -28,22 +31,22 @@
 - [x] Dynamic values are output via PHP (not hardcoded in builder text blocks)
 
 ## Phase 3 — WooCommerce
-- [ ] WooCommerce configured (currency, pages)
-- [ ] Simple product created
-- [ ] Variable product created with >=2 attributes
-- [ ] Product badge appears as expected
-- [ ] Custom ACF field displays on single product page
-- [ ] No WooCommerce core files edited
+- [x] WooCommerce configured (currency, pages)
+- [x] Simple product created
+- [x] Variable product created with >=2 attributes
+- [x] Product badge appears as expected
+- [x] Custom ACF field displays on single product page
+- [x] No WooCommerce core files edited
 
 ## Phase 4 — Debugging scenario
-- [ ] `notes/DEBUGGING.md` included
+- [x] `notes/DEBUGGING.md` included
 
 ## Phase 5 — Written questions
-- [ ] `notes/QUESTIONS.md` included
+- [x] `notes/QUESTIONS.md` included
 
 ## Quick Smoke Tests
-- [ ] Homepage loads
-- [ ] Marketing page loads
+- [x] Homepage loads
+- [x] Marketing page loads
 - [x] Case study listing + single loads
-- [ ] Add-to-cart works
-- [ ] Checkout loads without errors
+- [x] Add-to-cart works
+- [x] Checkout loads without errors

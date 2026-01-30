@@ -8,6 +8,7 @@ require_once __DIR__ . '/helpers.php';
 require_once __DIR__ . '/health.php';
 require_once __DIR__ . '/case-studies.php';
 require_once __DIR__ . '/template-loader.php';
+require_once __DIR__ . '/woocommerce.php';
 
 add_action( 'plugins_loaded', 'idg_custom_init' );
 

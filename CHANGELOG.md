@@ -15,9 +15,15 @@ All notable changes to this assignment repo.
     - `archive-case_study.php`
     - `single-case_study.php`
   - Health checks for ACF/WooCommerce dependency visibility.
-  - Documentation moved to root `README.md` for portfolio/reviewer visibility.
+  - WooCommerce customizations in `idg-custom`:
+    - Product badge output via hooks (shop loop + single product).
+    - Product Highlight output on the single product page.
+- Documentation moved to root `README.md` for portfolio/reviewer visibility.
 - Root `README.md` and `CHANGELOG.md` for reviewer-friendly project navigation.
 - Phase 2 documentation and verification updates.
+- Phase 3 completion notes:
+  - WooCommerce customizations.
+  - Pagination layout fix.
 - Verified Phase 2 staging URLs:
   - https://dev.staging.idgadvertising.com/ronald/case-studies/
   - https://dev.staging.idgadvertising.com/ronald/all-case-studies/
@@ -35,3 +41,4 @@ All notable changes to this assignment repo.
 - Local upload size limits impacting WordPress/ACF media uploads.
 - Debug output/header issues (e.g. notices breaking page output).
 - Case Study flexible content `image_text` rendering when ACF image return format is not an array (support array/ID/URL).
+- Case Studies listing shortcode pagination layout (rendered inline on one line).

@@ -30,6 +30,13 @@ This document describes what custom code was added for the IDG WordPress skills 
 - WooCommerce installed and configured on staging.
 - Customizations implemented via hooks/filters inside `idg-custom` plugin.
 
+## Staging URLs (Phase 3)
+- Store: https://dev.staging.idgadvertising.com/ronald/store/
+- Simple product: https://dev.staging.idgadvertising.com/ronald/product/simple-product/
+- Variable product: https://dev.staging.idgadvertising.com/ronald/product/variable-product/
+- Cart: https://dev.staging.idgadvertising.com/ronald/cart/
+- ACF field groups (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/edit.php?post_type=acf-field-group
+
 ## Notes for Reviewers
 - No WordPress core edits.
 - No WooCommerce core edits.

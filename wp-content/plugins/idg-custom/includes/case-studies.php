@@ -42,6 +42,16 @@ function idg_custom_register_case_studies_cpt() {
 
 add_shortcode( 'idg_case_studies', 'idg_custom_case_studies_shortcode' );
 
+add_action( 'wp_enqueue_scripts', 'idg_custom_case_studies_enqueue_styles' );
+
+function idg_custom_case_studies_enqueue_styles() {
+	wp_register_style( 'idg-custom-inline', false );
+	wp_enqueue_style( 'idg-custom-inline' );
+
+	$css = '.idg-case-studies-pagination .idg-pagination{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0;padding:0}.idg-case-studies-pagination .idg-pagination-item{display:inline-flex}.idg-case-studies-pagination .idg-pagination-item .page-numbers{display:inline-flex;align-items:center;justify-content:center;line-height:1;padding:6px 10px}';
+	wp_add_inline_style( 'idg-custom-inline', $css );
+}
+
 function idg_custom_case_studies_shortcode( $atts ) {
 	$atts = shortcode_atts(
 		array(
@@ -123,17 +133,21 @@ function idg_custom_case_studies_shortcode( $atts ) {
 		}
 		echo '</div>';
 
-		$pagination = paginate_links(
+		$pagination_links = paginate_links(
 			array(
 				'base'    => esc_url_raw( add_query_arg( 'idg_cs_page', '%#%' ) ),
 				'total'   => (int) $query->max_num_pages,
 				'current' => $paged,
-				'type'    => 'list',
+				'type'    => 'array',
 			)
 		);
 
-		if ( $pagination ) {
-			echo '<nav class="idg-case-studies-pagination" aria-label="Case studies pagination">' . wp_kses_post( $pagination ) . '</nav>';
+		if ( $pagination_links && is_array( $pagination_links ) ) {
+			echo '<nav class="idg-case-studies-pagination" aria-label="Case studies pagination"><div class="idg-pagination">';
+			foreach ( $pagination_links as $link_html ) {
+				echo '<span class="idg-pagination-item">' . wp_kses_post( $link_html ) . '</span>';
+			}
+			echo '</div></nav>';
 		}
 	} else {
 		echo '<p>No case studies found.</p>';
