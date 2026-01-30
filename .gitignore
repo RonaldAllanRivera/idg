@@ -14,6 +14,7 @@
 # Ignore internal/reference docs not intended for submission
 ABOUT.md
 ADS.md
+PLAN.md
 
 # Never track WordPress core (even if it contains markdown)
 wp-admin/
