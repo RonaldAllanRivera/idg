@@ -15,6 +15,7 @@
 ABOUT.md
 ADS.md
 PLAN.md
+ASSIGNMENT.md
 
 # Never track WordPress core (even if it contains markdown)
 wp-admin/
