@@ -3,8 +3,12 @@
 ## URLs (fill in once complete)
 - Marketing page: https://dev.staging.idgadvertising.com/ronald/
 - Global element used on: 
-- Case studies listing: 
-- Case study single example: 
+- Case studies listing (archive): https://dev.staging.idgadvertising.com/ronald/case-studies/
+- Case studies listing (page with query loop): https://dev.staging.idgadvertising.com/ronald/all-case-studies/
+- Case study single example: https://dev.staging.idgadvertising.com/ronald/case-studies/case-1/
+- ACF field group (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/post.php?post=202&action=edit
+- Case Studies (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/edit.php?post_type=case_study
+- Listing shortcode helper (admin): https://dev.staging.idgadvertising.com/ronald/wp-admin/edit.php?post_type=case_study&page=idg-case-studies-shortcode
 - Simple product: 
 - Variable product: 
 - Checkout page:
@@ -16,12 +20,12 @@
 - [x] Responsive: mobile/tablet/desktop checked
 
 ## Phase 2 — Case Studies (CPT + ACF)
-- [ ] CPT exists and can create entries
-- [ ] ACF fields created and populated
-- [ ] Flexible content has at least two layouts
-- [ ] Listing page uses a query loop
-- [ ] Single template renders dynamic fields
-- [ ] Dynamic values are output via PHP (not hardcoded in builder text blocks)
+- [x] CPT exists and can create entries
+- [x] ACF fields created and populated
+- [x] Flexible content has at least two layouts
+- [x] Listing page uses a query loop
+- [x] Single template renders dynamic fields
+- [x] Dynamic values are output via PHP (not hardcoded in builder text blocks)
 
 ## Phase 3 — WooCommerce
 - [ ] WooCommerce configured (currency, pages)
@@ -40,6 +44,6 @@
 ## Quick Smoke Tests
 - [ ] Homepage loads
 - [ ] Marketing page loads
-- [ ] Case study listing + single loads
+- [x] Case study listing + single loads
 - [ ] Add-to-cart works
 - [ ] Checkout loads without errors

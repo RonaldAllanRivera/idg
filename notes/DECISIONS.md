@@ -10,8 +10,8 @@
   - minor theme-level styling adjustments
 
 ## ACF synchronization approach
-- Preferred: **ACF PHP export** (code-based field groups in `idg-custom`) so field groups are versioned and consistent across environments even when staging/prod filesystem isn’t writable.
-- Optional: **ACF Local JSON** when filesystem writes are available.
+- For this skills test, the Case Studies field group was created directly in **WP Admin (ACF UI)** on staging and stored in the database.
+- This was chosen to avoid requiring FTP/filesystem write access during the assignment.
 
 ## Performance mindset
 - Keep Avada Builder usage lean (avoid unnecessary nesting/effects).

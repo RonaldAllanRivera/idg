@@ -64,6 +64,7 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 ---
 
 # Phase 2 — Case Studies (CPT + ACF + Templates) (90–120 min)
+**Status:** Completed (CPT + templates deployed; ACF field group created in WP Admin on staging; listing page with explicit query loop created via shortcode page)
 ## Deliverables
 - CPT: `case_study` (label: Case Studies)
 - ACF fields:
@@ -84,11 +85,8 @@ Deliver a clean, performant, maintainable implementation that matches IDG’s ag
 - Use a small, readable template partial structure (no giant functions.php blob).
 
 ## ACF Sync Best Practice
-- Preferred: **ACF PHP export (code-based field groups)** for field group versioning (works even when staging/prod filesystem isn’t writable / no FTP).
-  - Create field groups in WP Admin (ACF UI) on staging/dev.
-  - Use ACF Tools → Export → **PHP**.
-  - Commit the exported `acf_add_local_field_group()` code into the `idg-custom` plugin and deploy through Git.
-- Optional: **ACF Local JSON** can be enabled when filesystem writes are available.
+- For this skills test, field groups are created in **WP Admin (ACF UI)** on staging and stored in the database.
+- In a production workflow, prefer versioned field definitions (ACF Local JSON or code-based registration) when filesystem/deployment constraints allow it.
 
 ## Acceptance Criteria
 - Listing page shows case studies (title + key fields) via a query.
